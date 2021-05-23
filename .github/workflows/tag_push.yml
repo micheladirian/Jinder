@@ -1,3 +1,24 @@
+name: Unit Test
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+...
+steps:
+  - uses: actions/checkout@v2
+  - uses: actions/setup-java@v1
+    with:
+      java-version: 11
+  - name: Run tests
+    run: ./gradlew test
+
+
+
+
+
 name:
 
 on:
