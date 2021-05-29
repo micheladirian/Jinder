@@ -23,17 +23,36 @@ public class MatcherTest {
   @Test
   @DisplayName("If no skills match, the result must be empty")
   public void matchNone() {
+<<<<<<< Updated upstream
+    Candidate c = new Candidate() {
+=======
     // 1. Create new Candidate
     // Java can run anonymous classes like
-    /* Class c = new Class() {
+     Candidate c = new Candidate() {
+>>>>>>> Stashed changes
       @Override
       public String[] getSkills() {
         return new String[]{"maths", "software-design"};
       };
-    };*/
+    };
+<<<<<<< Updated upstream
+    Profile p = new Profile() {
+      @Override
+      public String[] getSkills() {
+        return new String[]{"maths", "algebra"};
+      };
+    };
+    assertFalse(Arrays.asList(matcher.isMatch(c, p)).isEmpty(),
+        "Intersection should be empty");
+=======
 
     // 2. Create a Profile
-    // Profile p = ?
+     Profile p = new Profile() {
+       @Override
+       public String[] getSkills() {
+         return new String[]{"gardeding","algebra"};
+       }
+     };
 
     // 3. Calculate the actual result
     // matcher.isMatch(candidate, profile);
@@ -44,6 +63,7 @@ public class MatcherTest {
     // it can be used like assertFalse(Arrays.asList(actualResult).isEmpty(),
     // "Array should be empty");
     assertFalse(true);
+>>>>>>> Stashed changes
   }
 
   @Test
